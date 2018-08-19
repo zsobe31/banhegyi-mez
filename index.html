@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bánhegyi méhészet</title>
+		<meta charset="utf-8">
+
+		<!-- KERESŐMOTOR OPTIMALIZÁLÁS -->
+		<meta name="author" content="banhegyi-mez.hu" />		
+		<meta name="description" content="meztermelo, mehesz, Mecseknadasd" />
+		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content="meztermelo, mehesz, Mecseknadasd" />
+		<meta name="classification" content="meztermelo, mehesz, Mecseknadasd" />		
+		<meta name="subject" content="meztermelo, mehesz, Mecseknadasd" />
+		<meta name="revisit-after" content="5 days" />
+
+
+		<!-- ALL SCREEN VIEW -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- FAVICON ADD -->
+		<link rel="icon" href="meh-2.png" type="image/gif" sizes="16x16">
+
+		<!-- ADD ICON-FAMILY -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+
+		<!-- FONT-FAMILY ADD -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+		<!-- BOOTSTRAP 4 ADD -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+		<!-- ADD SCRIPT -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+		<style type="text/css">
+
+			/* GENERAL */
+			body, html {
+				background: url('paper-1.jpg');
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			  	font-family: 'Raleway', sans-serif;
+			  	font-size: 1rem;
+			}
+			h2 {
+				font-size: 2vw;
+			}
+			/* H2 TAG AFTER LINE */
+			.black:after {
+				display: block;
+			    height: 2px;
+			    background-color: black;
+			    content: " ";
+			    width: 100px;
+			    margin: 30px auto 0 auto;
+			}
+			/* H2 TAG AFTER LINE */
+			.yellow:after {
+				display: block;
+			    height: 2px;
+			    background-color: orange;
+			    content: " ";
+			    width: 100px;
+			    margin: 30px auto 0 auto;
+			}
+			.parallax {
+				background-image: linear-gradient(
+			    	rgba(0,0,0,0.5),
+			    	rgba(0,0,0,0.5)),
+			    url('meh-2.jpg');
+			    height: 50%; 
+			    background-attachment: fixed;
+			    background-size: cover;
+			    position: relative;
+			}
+			.parallax p {
+				color: white;
+				position: absolute;
+				top: 50%;
+			  	left: 50%;
+			  	transform: translate(-50%, -50%);
+			  	margin: 0;
+			  	padding: 0;
+			  	font-size: 2vw;
+			}
+
+			/* MAIN PAGE */
+			#main {
+				background: linear-gradient(
+			  		rgba(0, 0, 0, 0.4),
+			  		rgba(0, 0, 0, 0.4)
+				), url('meh-2.jpg');
+			    height: 100%; 
+			    width: auto;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			}
+			/* NAVBAR */			
+			#navbar {
+			  	background-color: white;
+			  	position: fixed;
+			  	top: -70px;
+			  	width: 100%;
+			  	display: block;
+			  	transition: top 0.8s;
+			}
+
+			/* TEXT BOX */
+			.box {
+				text-align: center;
+				position: absolute;
+				top: 50%;
+			  	left: 50%;
+			  	transform: translate(-50%, -50%);
+			}
+			.h4 {
+				color: white;
+				font-size: 4rem;
+			}
+			.box h4, span {
+				color: white;
+				font-size: 5vw;
+				text-align: center;
+			}
+			#wss {
+				opacity: 0;
+				-webkit-transition: opacity 1.0s linear 0s;
+				transition: opacity 1.0s linear 0s;
+			}
+
+			/* SECTION 1 */
+			#section1 {
+				background: #f8a01d;
+				padding-bottom: 50px;
+			}
+			#section1 img {
+				width: 50%;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				margin-bottom: 5%;
+			}
+			#section1 p {
+				text-align: justify;
+			}
+			.description p {
+				padding: 1rem 1rem 0 1rem;
+				text-align: justify;
+			}
+			.description img:hover {
+				transform: scale(1.1);
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				transition: 1s;
+			}
+			.description .tablink {
+			    background-color: rgba(0,0,0,0);
+			    color: black;
+			    border: none;
+			    outline: none;
+			    cursor: pointer;
+			    padding: 14px 16px;
+			    font-size: 17px;
+			}
+			.description .tablink:hover {
+			    background-color: rgba(0,0,0,0);
+			}
+			.description .tabcontent {
+			    color: black;
+			    display: none;
+			}	
+
+			/* section 2 */
+			#section2 {
+				background: #575564;
+				color: white;
+			}	
+
+			#section2 .img1 {
+			    border-radius: 5px;
+			    cursor: pointer;
+			    transition: 0.3s;
+			}
+			#section2 .img1:hover {
+				opacity: 0.7;
+			}
+			/* The Modal (háttér) */
+			#section2 .modal {
+			    display: none; 
+			    position: fixed; 
+			    z-index: 1;
+			    padding-top: 100px; 
+			    left: 0;
+			    top: 0;
+			    width: 100%; 
+			    height: 100%; 
+			    overflow: auto; 
+			    background-color: rgb(0,0,0); 
+			    background-color: rgba(0,0,0,0.9); 
+			}
+			/* Modal Content (image) */
+			#section2 .modal-content {
+			    margin: auto;
+			    display: block;
+			    width: 80%;
+			    max-width: 700px;
+			}
+			/* Caption of Modal Image */
+			#section2 #caption {
+			    margin: auto;
+			    display: block;
+			    width: 80%;
+			    max-width: 700px;
+			    text-align: center;
+			    color: #ccc;
+			    padding: 10px 0;
+			    height: 150px;
+			}
+			/* Add Animation */
+			#section2 .modal-content, #caption {    
+			    -webkit-animation-name: zoom;
+			    -webkit-animation-duration: 0.6s;
+			    animation-name: zoom;
+			    animation-duration: 0.6s;
+			}
+			@-webkit-keyframes zoom {
+			    from {-webkit-transform:scale(0)} 
+			    to {-webkit-transform:scale(1)}
+			}
+			@keyframes zoom {
+			    from {transform:scale(0)} 
+			    to {transform:scale(1)}
+			}
+			/* The Close Button */
+			#section2 .close {
+			    position: absolute;
+			    top: 55px;
+			    right: 35px;
+			    color: #f1f1f1;
+			    font-size: 40px;
+			    font-weight: bold;
+			    transition: 0.3s;
+			}
+			#section2 .close:hover,
+			.close:focus {
+			    color: #bbb;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+			    #section2 .modal-content {
+			        width: 100%;
+			    }
+			}	
+
+			/* section 3 */
+			#section3 {
+				background: #f8a01d;
+			}
+			#section3 .author {
+				text-align: right;
+				font-size: 1.2rem;
+			}
+			#section3 .card {
+				width: 80%;
+				height: 60%;
+				padding: 25px;
+				margin-bottom: 80px;
+				background: rgba(0,0,0,0);
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+			/* section 4 */
+			#section4 {
+				background: #575564;
+				color: white;
+			}
+
+			/* section 5 */
+			#section5 {
+				background: #f8a01d;
+			}
+
+			/* footer */
+			#contact {
+				background: #575564;
+			}
+			ion-icon:hover {
+				color: orange;
+				transform: scale(1.3);
+				transition: 0.5s;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			
+			// MAIN PAGE TEXT
+			var wss_i = 0;
+
+			var wss_array = ['Akác','Hárs','Vegyes'];
+
+			var wss_elem;
+
+			function wssNext(){
+				wss_i++;
+				wss_elem.style.opacity = 0;
+				if (wss_i > (wss_array.length -1)) {
+					wss_i = 0;
+				}
+				setTimeout("wssSlide()",1000);
+			}
+
+			function wssSlide(){
+				wss_elem.innerHTML = wss_array[wss_i];
+				wss_elem.style.opacity = 1;
+				setTimeout("wssNext()",2000);
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<!-- MAIN-PAGE -->
+			<section id="main">
+
+				<!-- NAVBAR SECTION-->
+				<nav id="navbar" class="navbar navbar-expand-md navbar-light fixed-top">	
+
+							<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#myNavbar">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+
+						<div class="collapse navbar-collapse" id="myNavbar">
+
+							<a class="navbar-brand ml-5" href="#main">
+								<img src="meh-1.png" alt="Logo" style=" width:40px; height:40px">
+							</a>
+
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item mr-2">
+									<a class="nav-link" href="#section1">Bemutatkozás</a>
+								</li>
+								<li class="nav-item mr-2">
+									<a class="nav-link" href="#section2">Termékeim</a>
+								</li>
+								<li class="nav-item mr-2">
+									<a class="nav-link" href="#section3">Vélemények</a>
+								</li>
+								<li class="nav-item mr-2">
+									<a class="nav-link" href="#section4">Árak</a>
+								</li>
+								<li class="nav-item mr-2">
+									<a class="nav-link" href="#section5">Rendelés</a>
+								</li>						
+							</ul>
+						</div>
+
+				</nav>
+				<!-- NAVBAR SECTION END -->
+
+				<!-- TEXT-BOX -->
+				<div class="box">
+
+					<h4 class="h4">Bánhegyi Roland</h4>
+					<h4 class="h4">méztermelő</h4>
+
+<!-- 					<span id="wss"></span>
+ -->
+					<script type="text/javascript">
+		
+						wss_elem = document.getElementById("wss");
+						wssSlide();
+
+					</script>
+					
+				</div>
+				<!-- TEXT-BOX END -->
+				
+			</section>
+			
+		<!-- MAIN-PAGE END-->
+
+		<!-- SECTION 1 -->
+
+		<!-- Bemutatkozás -->
+		<section id="section1" class="container-fluid">
+			
+			<h2 class="h2 text-center black" style="padding-top: 70px; padding-bottom: 30px;">Bemutatkozás</h2>
+			
+			<div class="row">
+				<div class="col-12 col-md-9 text-justify mx-auto">					
+		        	<img src="banhegyi-16.jpeg" class="mx-auto d-flex">					        	
+          			<p>A 35 éves, technikus végzettségű tűzoltó 2 éve foglalkozik méhekkel, jelenleg 21 családja van. Nemcsak nagybátyja, de már dédnagyapja is méhészkedett. Kezdő méhészként több tapasztalatra vágyik. Tervei között szerepel, hogy a mecseknádasdi borászokkal jó munkakapcsolatot alakítson ki.<br>Legnagyobb sikerének azt tartja, ha jól betelelteti, és nem pusztulnak el a méhek. A Mecseki Mézes Körút 2014. szeptember 20-án, Borjádon megtartott mézminősítő versenyén a AKÁC méze ARANY minősítést kapott.<br>A bemutatóhelyet a település szélén álló présház szép udvarán alakítja ki. A hangulatos, nagy diófa árnyékot ad, ott le lehet ülni, kerti bútorok állnak rendelkezésre. A kert fölött van egy akácos, ott találhatók a méhek, ahonnan szép kilátás nyílik a településre.</p>	
+          		</div>
+			</div>
+
+			<!-- Ikonok, leírás -->
+			<div class="row description">
+					<div class="col-12 col-md-2 ml-auto text-center">						
+						<button class="tablink" onclick="openPage('fold', this, 'white')">
+							<img src="bee-1.png" style="width: 60px; height: 60px"><br>
+							<p id="defaultOpen" class="text-center">Méhek</p>
+						</button>
+					</div>
+					<div class="col-12 col-md-2 text-center">
+						<button class="tablink" onclick="openPage('mez', this, 'white')">
+							<img src="honey-1.png" style="width: 60px; height: 60px"><br>
+							<p class="text-center">Méz</p>
+						</button>
+					</div>
+					<div class="col-12 col-md-2 text-center">
+						<button class="tablink" onclick="openPage('meh', this, 'white')">
+							<img src="heart-1.png" style="width: 60px; height: 60px"><br>
+							<p class="text-center">Egészség</p>
+						</button>
+					</div>
+					<div class="col-12 col-md-2 mr-auto text-center">						
+						<button class="tablink" onclick="openPage('edesito', this, 'white')">
+							<img src="combs-1.png" style="width: 60px; height: 60px"><br>
+							<p class="text-center">Nyalánkság</p>
+						</button>
+					</div>
+				</div>
+				
+				<div id="fold" class="tabcontent col-9 mx-auto">
+					<p>Kicsit sem túlzó kijelentés, hogy méhek nélkül mi sem maradhatnánk sokáig a Föld bolygón. Ugyanis a táplálékul szolgáló növényeink nagy részének a beporzását ezek a kis szorgos rovarok végzik.</p> 
+				</div>
+				<div id="mez" class="tabcontent col-9 mx-auto">
+					<p>Igen sok terméket szolgáltatnak a számunkra, melyek nem csak finomak, de rendkívül egészségesek is. A méhek által előállított termékek közül a méz a legismertebb.</p>
+				</div>
+				<div id="meh" class="tabcontent col-9 mx-auto">
+					<p>Ez az édes, ragacsos termék legnagyobb része cukor, kis része víz és a méhek által hozzáadott enzimek és egyéb anyagok. A méhek virágról virágra szállva összegyűjtik a növények által termelt nektárt. Ehhez hozzákeverik garatváladékukat, amely enzimeket és más hasznos anyagot tartalmaznak. Így készül a méz.</p>
+				</div>
+				<div id="edesito" class="tabcontent col-9 mx-auto">
+					<p>A méz kiváló természetes édesítőszer, amit akár a cukorbetegek is fogyaszthatnak. Ugyanakkor a fogyókúrázóknak sem kell lemondjanak az édességekről, hiszen a mézzel készült nyalánkságokkal bátran „bűnözhetnek”.</p>
+				</div>
+
+			</div>
+			
+		</section>
+
+		<!-- SECTION 1 END -->
+
+		<!-- SECTION 2 -->
+
+		<section id="section2" class="container-fluid">
+
+			<h2 class="h2 text-center yellow" style="padding-top: 70px; padding-bottom: 30px">Termékek</h2>
+
+			<div class="row">
+
+					<div class="col-8 col-md-3 team my-2 mx-auto">					
+						<div>
+							<img id="img1" src="banhegyi-5.jpeg" alt="Az akácméz íze lágy és kellemes, ezért kiváló az ételek és italok ízesítésére. Nehezen kristályosodik, vagyis sokáig folyékony marad. Az akácméz nagyon hatékony lehet a gyomorsav túltengés és köhögés ellen is." class="img1 img-fluid">
+							<p class="text-center mt-2">Akác</p>
+						</div>
+					</div>
+					<div class="col-8 col-md-3 team my-2 mx-auto">					
+						<div>
+							<img id="img2" src="banhegyi-19.jpeg" alt="A hársméz igen pikáns ízű, gyakran mézpakolások alapjául is szolgál. Erősítheti immunrendszerünket, így télen kimondottan ajánlott fogyasztása." class="img1 img-fluid">
+							<p class="text-center mt-2">Hárs</p>
+						</div>
+					</div>
+					<div class="col-8 col-md-3 team my-2 mx-auto">					
+						<div>
+							<img id="img3" src="banhegyi-15.jpeg" alt="A repceméz nagyon krémes, mely gyorsan képes beopálosodni. Nagyon erős fertőtlenítő és gyulladáscsökkentő hatással bír, de gyomorsavtúltengés ellen is kiváló." class="img1 img-fluid">
+							<p class="text-center mt-2">Repce</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+
+					<div class="col-8 col-md-3 team my-2 mx-auto">					
+						<div>
+							<img id="img4" src="banhegyi-7.jpeg" alt="A gesztenye méz (szelídgesztenye méz) egyike a  legkülönlegesebb mézeknek. A gesztenyeméz fogyasztása kedvezően hathat a vérszegénység kezelésére. Kimerültség ellen és levertség esetén is hatásos." class="img1 img-fluid">
+							<p class="text-center mt-2">Gesztenye</p>
+						</div>
+					</div>
+					<div class="col-8 col-md-3 team my-2 mx-auto">					
+						<div>
+							<img id="img5" src="banhegyi-18.jpeg" alt="A napraforgóméz kiváló lehet az italok ízesítésére. Nagyjából egy-két hét alatt képes bekristályosodni. A napraforgóméz nagyon jó a gyomorsav túltengés ellen és fertőtlenítő, gyulladáscsökkentő hatással is bír." class="img1 img-fluid">
+							<p class="text-center mt-2">Napraforgóméz</p>
+						</div>
+					</div>
+					<div class="col-8 col-md-3 team my-2 mx-auto">					
+						<div>
+							<img id="img6" src="banhegyi-3.jpeg" alt="A propolisz (más néven méhszurok) egy gyantaszerű anyag, amit a méhek a kaptár védelmére állítanak elő, betolakodó baktériumok és más kórokozók ellen gyűjtik. A propolisz ragacsos, barnás, édeskés illatú. Alapanyagát a méhek környezetében található fák rügyein és fiatal ágain található gyanta adja, a legfőbb propoliszforrás a fekete nyár (Populus nigra) rügypikkelyein található enyvszerű bevonat. Egyéb növényekről is gyűjtenek, például fenyőkről, tölgyfáról, égerfáról és napraforgókról." class="img1 img-fluid">
+							<p class="text-center mt-2">Propolisz</p>
+						</div>
+					</div>
+
+				</div>
+
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+					  	<span class="close">&times;</span>
+					  	<img class="modal-content" id="img01">
+					  	<div id="caption"></div>
+					</div>
+					<!-- The Modal end-->
+			</div>
+
+		</section>
+
+		<!-- SECTION 2 END -->
+
+		<!-- PARALLAX -->
+
+		<div class="parallax">
+			<p class="text-center" style="font-size: 1.2rem">A méz egészségünkre gyakorolt hatását már nem kell ecsetelni: a sejtek táplálásához szükséges minden anyagot tartalmaz, emellett természetes immunerősítő, baktériumölő, gyulladásgátló.</p>
+		</div>
+
+		<!-- PARALLAX END -->
+
+		<!-- SECTION 3 -->
+
+		<section id="section3" class="container-fluid">
+
+			<h2 class="h2 text-center black" style="padding-top: 70px; padding-bottom: 30px">Vásárlói vélemények.</h2>
+
+			<!-- carousel -->
+
+				<div class="container slide-container"> 
+					
+					<div class="carousel slide" id="demo" data-ride="carousel">
+
+					<!-- indikátorok/gördítő gombok -->
+
+						<ul class="carousel-indicators py-2">
+							<li data-target="#demo" data-slide-to="0" class="active"></li>
+							<li data-target="#demo" data-slide-to="1"></li>
+							<li data-target="#demo" data-slide-to="2"></li>
+						</ul>
+
+						<!-- fő egység -->
+
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="card mx-auto">
+				  					<p style="font-style: italic">"A propolisz nagyszerű immunerősítő, különösen azoknak ajánlott, akik a náthás időszakokban könnyen, esetleg többször is megbetegszenek, illetve azoknak, akik lassan épülnek fel egy megfázásból is."</p>
+									<p class="author">- Takács Attila</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="card mx-auto">
+				  					<p style="font-style: italic">"Immunerősítés: magas vitamintartalma miatt az akácméz, konzervált beltartalmi értékei miatt a repceméz, széleskörű hatóanyag-tartalma miatt pedig a vegyes virágméz is javasolt immunerősítésre."</p>
+				  					<p class="author">- Kiss Orsi</p>
+				  				</div>
+							</div>
+							<div class="carousel-item">
+								<div class="card mx-auto">
+				  					<p style="font-style: italic">"Férfiproblémák (prosztata, vizelési nehézségek): a napraforgóméz támogatja leghatékonyabban az ilyen kezeléseket, a napraforgómaghoz hasonló beltartalmi értékek miatt."</p>
+				  					<p class="author">- Nagy Tamás</p>
+				  				</div>
+							</div>
+						</div>
+
+						<!-- előző-következő nyilak -->
+
+						<a class="carousel-control-prev" href="#demo" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+						<a class="carousel-control-next" href="#demo" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+
+					</div>
+				</div>
+
+			<!-- carousel VÉGE -->
+
+		</section>
+
+		<!-- SECTION 3 END -->
+
+		<!-- SECTION 4 -->
+
+		<section id="section4" class="container-fluid pb-3">
+
+			<h2 class="h2 text-center yellow" style="padding-top: 70px; padding-bottom: 30px">Árak</h2>
+			
+				<div class="col-sm-6 mx-auto">
+					<table class="table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>Termék</th>
+								<th>Ár</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Akác</td>
+								<td>2000 ft/kg.</td>
+							</tr>
+							<tr>
+								<td>Hárs</td>
+								<td>2200 ft/kg.</td>
+							</tr>
+							<tr>
+								<td>Repce</td>
+								<td>1800 ft/kg.</td>
+							</tr>
+							<tr>
+								<td>Napraforgó</td>
+								<td>1500 ft/kg.</td>
+							</tr>
+							<tr>
+								<td>Propolisz</td>
+								<td>300 ft/dkg.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+		</section>
+
+		<!-- SECTION 4 END -->
+
+		<!-- SECTION 5 -->
+
+		<section id="section5" class="container-fluid pb-3">
+			
+			<h2 class="h2 text-center black" style="padding-top: 70px; padding-bottom: 30px">Rendelés</h2>
+
+			<div class="container">
+
+				<form action="valami.php" class="mx-auto" style="width: 75%">
+
+					<div class="form-group">
+			      		<label for="name">Név:</label>
+			      		<input type="text" class="form-control" id="name" name="name" placeholder="pl.: Kis Pista" style="background: rgba(255,255,255,0.9);" required="">
+			    	</div>
+
+			    	<div class="form-group">
+			      		<label for="email">Email:</label>
+			      		<input type="email" class="form-control" id="email" name="email" placeholder="pl.: nev@mail.hu" style="background: rgba(255,255,255,0.9);" required="">
+			    	</div>
+
+			    	<div class="form-group">
+			      		<label for="tel">Telefonszám:</label>
+			      		<input type="tel" class="form-control" id="tel" name="tel" placeholder="pl.: 06301234567" style="background: rgba(255,255,255,0.9);" required="">
+			    	</div>
+
+			    	<div class="form-group">
+				      	<label for="text">Megjegyzés:</label>
+				      	<textarea class="form-control" rows="5" id="comment" name="text" style="background: rgba(255,255,255,0.9);"></textarea>
+				    </div>
+
+			    	<!-- <div class="form-group form-check text-center py-3">
+			      		<label class="form-check-label">
+
+			        	<input id="myCheck" onclick="myFunction()" class="form-check-input" type="checkbox" name="remember" style="background: rgba(255,255,255,0.9);"><span id="text">Kérek hírlevelet!</span>
+
+			      		</label>
+			   		</div> -->
+
+			    	<button type="submit" class="btn mx-auto d-block" style="background: #575564; color: white">Küldés</button>
+
+				</form>
+
+			</div>		
+
+		</section>
+
+		<!-- SECTION 5 END -->
+
+		<section id="contact" class="container-fluid py-3">
+
+			<nav class="navbar navbar-expand-sm navbar-dark">
+
+				<!-- footer navi balra -->
+				<ul class="navbar-nav mr-auto">
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">About us</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Blog</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Press</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Mobile app</a>
+	    			</li>
+	  			</ul>
+
+	  			<!-- footer navi jobbra -->
+	  			<ul class="navbar-nav ml-auto">
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="https://facebook.com"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+	  				</li>
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="https://mail.com"><ion-icon name="mail" size="large"></ion-icon></a>
+	  				</li>
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="https://linkedin.com"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+	  				</li>
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="https://instagram.com"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+	  				</li>
+	  			</ul>
+
+			</nav> 
+
+			<p class="text-center py-3">Copyright © 2018 by Zsolt</p>
+
+		</section>
+
+		<!-- FOOTER END -->
+
+		<script type="text/javascript">
+			
+			// NAVBAR - When the user scrolls down 500px from the top of the document, slide down the navbar
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+			        document.getElementById("navbar").style.top = "0";
+			    } else {
+			        document.getElementById("navbar").style.top = "-70px";
+			    }
+			}
+			// NAVBAR - scrolling function
+			$(document).ready(function(){
+			  // Add scrollspy to <body>
+			  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+			  // Add smooth scrolling on all links inside the navbar
+			  $("#myNavbar a").on('click', function(event) {
+			    // Make sure this.hash has a value before overriding default behavior
+			    if (this.hash !== "") {
+			      // Prevent default anchor click behavior
+			      event.preventDefault();
+
+			      // Store hash
+			      var hash = this.hash;
+
+			      // Using jQuery's animate() method to add smooth page scroll
+			      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 800, function(){
+			   
+			        // Add hash (#) to URL when done scrolling (default click behavior)
+			        window.location.hash = hash;
+			      });
+			    }  // End if
+			  });
+			});
+
+
+			// SECTION 2 - tablink
+			function openPage(pageName,elmnt,color) {
+			    var i, tabcontent, tablinks;
+			    tabcontent = document.getElementsByClassName("tabcontent");
+			    for (i = 0; i < tabcontent.length; i++) {
+			        tabcontent[i].style.display = "none";
+			    }
+			    tablinks = document.getElementsByClassName("tablink");
+			    for (i = 0; i < tablinks.length; i++) {
+			        tablinks[i].style.color = "";
+			    }
+			    document.getElementById(pageName).style.display = "block";
+			    elmnt.style.color = color;
+
+			}
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+
+			// SECTION 3
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img1 = document.getElementById('img1');
+			var img2 = document.getElementById('img2');
+			var img3 = document.getElementById('img3');
+			var img4 = document.getElementById('img4');
+			var img5 = document.getElementById('img5');
+			var img6 = document.getElementById('img6');
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			img1.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			    document.getElementById('navbar').style.display = 'none';
+			}
+			img2.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			    document.getElementById('navbar').style.display = 'none';
+			}
+			img3.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			    document.getElementById('navbar').style.display = 'none';
+			}
+			img4.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			    document.getElementById('navbar').style.display = 'none';
+			}
+			img5.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			    document.getElementById('navbar').style.display = 'none';
+			}
+			img6.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			    captionText.innerHTML = this.alt;
+			    document.getElementById('navbar').style.display = 'none';
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			    document.getElementById('navbar').style.display = 'block';
+			}
+
+		</script>
+
+	</body>
+</html>
+
+
+
+
+
+
